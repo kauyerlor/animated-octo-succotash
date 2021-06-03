@@ -12,7 +12,7 @@ timeline.push(preload);
 /* define welcome message trial */
 var welcome = {
   type: "html-keyboard-response",
-  stimulus: "Press any key to begin."
+  stimulus: "Press any key to start the instructions."
 };
 timeline.push(welcome);
 
