@@ -12,7 +12,7 @@ timeline.push(preload);
 /* define welcome message trial */
 var welcome = {
   type: "html-keyboard-response",
-  stimulus: "Welcome to the experiment. Press any key to begin."
+  stimulus: "Press any key to begin."
 };
 timeline.push(welcome);
 
@@ -20,7 +20,7 @@ timeline.push(welcome);
 var instructions = {
   type: "html-keyboard-response",
   stimulus: `
-    <p>In this experiment, a circle will appear in the center
+    <p>In the following task, a circle will appear in the center
     of the screen.</p><p>If the circle is <strong>blue</strong>,
     press the letter F on the keyboard as fast as you can.</p>
     <p>If the circle is <strong>orange</strong>, press the letter J
