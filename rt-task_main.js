@@ -19,21 +19,22 @@ timeline.push(welcome);
 /* define instructions trial */
 var instructions = {
   type: "html-keyboard-response",
-  stimulus: `
-    <p>In the following task, a circle will appear in the center
-    of the screen.</p><p>If the circle is <strong>blue</strong>,
-    press the letter F on the keyboard as fast as you can.</p>
-    <p>If the circle is <strong>orange</strong>, press the letter J
-    as fast as you can.</p><p>We are interested in how fast AND how 
-    accurate you can complete this task.</p><p>
-    You will have a chance to practice before the real task.</p>
-    <div style='width: 700px;'>
-    <div style='float: left;'><img src='https://kauyerlor.github.io/animated-octo-succotash/img/blue.png'></img>
-    <p class='small'><strong>Press the F key</strong></p></div>
-    <div class='float: right;'><img src='https://kauyerlor.github.io/animated-octo-succotash/img/orange.png'></img>
-    <p class='small'><strong>Press the J key</strong></p></div>
-    </div>
-    <p>Press any key to begin your practice.</p>
+  stimulus: 
+    "<p>In the following task, a circle will appear in the center" +
+    "of the screen.</p><p>If the circle is <strong>blue</strong>," +
+    "press the letter F on the keyboard as fast as you can.</p>" +
+    "<p>If the circle is <strong>orange</strong>, press the letter J " +
+   " as fast as you can.</p>" +
+  "<p>We are interested in how fast AND how" +
+    "accurate you can complete this task.</p>" +
+  "<p> You will have a chance to practice before the real task.</p>" +
+    "<div style='width: 700px;'>" +
+    "<div style='float: left;'><img src='" + repo_site + "img/blue.png'></img>" +
+    "<p class='small'><strong>Press the F key</strong></p></div>" +
+    "<div class='float: right;'><img src='" + repo_site + "img/orange.png'></img>" +
+    "<p class='small'><strong>Press the J key</strong></p></div>" +
+    "</div>" +
+    "<p>Press any key to begin your practice.</p>"
   `,
   post_trial_gap: 2000
 };
@@ -41,8 +42,20 @@ timeline.push(instructions);
 
 /* test trials */
 var test_stimuli = [
-  { stimulus: "https://kauyerlor.github.io/animated-octo-succotash/img/blue.png",  correct_response: 'f'},
-  { stimulus: "https://kauyerlor.github.io/animated-octo-succotash/img/orange.png",  correct_response: 'j'}
+  { stimulus: repo_site + "img/blue.png",  
+  data: {
+      test_part: 'test',
+      correct_response: 'f'
+  }
+ },
+  { 
+  
+  stimulus: repo_site + "img/orange.png",  
+  data: {
+       test_part: 'test', 
+       correct_response: 'j'
+   }
+  }
 ];
 
 var fixation = {
